@@ -23,7 +23,7 @@ int main(){
         cin.ignore();
 
         for(unsigned int i = 0; i < input; i++)
-            cout << keyboard[i%2][rand() % keyboard[i%2].length()]	// First array index changes sides of the keyboard.
+            cout << keyboard[i&1][rand() % keyboard[i&1].length()];	// First array index changes sides of the keyboard.
 									// Second array index chooses a random character.
         cout << "\n\nAgain? [y/n]: ";
     } while(getchar() == 'y');
